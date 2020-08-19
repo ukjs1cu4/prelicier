@@ -1,4 +1,4 @@
 while true ; do 
-python reza.py 
+python3 reza.py 
 sleep 5 
 done
