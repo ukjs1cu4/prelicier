@@ -4,7 +4,7 @@ import schedule
 import subprocess
 
 def reza():
- output = subprocess.check_output("netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r | awk '$1>100'", shell=True)
+ output = subprocess.check_output("netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r | awk '$1>50'", shell=True)
  ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', output )
  for i in ip:
   os.system('route add {} reject'.format(i))
