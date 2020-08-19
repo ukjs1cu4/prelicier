@@ -7,7 +7,7 @@ import time
 
 #kirm dhnt reza :D
 def reza():
- output = subprocess.check_output("netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r | awk '$1>10'", shell=True)
+ output = subprocess.check_output("netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r | awk '$1>50'", shell=True)
  if re.findall( r'[0-9]+(?:\.[0-9]+){3}', output ):
   ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', output )
   for i in ip:
