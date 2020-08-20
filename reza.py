@@ -13,7 +13,7 @@ def reza():
   for i in ip:
    os.system('route add {} reject'.format(i))
    bantext = "ip : {} Banned".format(i)
-   requests.get("https://api.telegram.org/bot1362187823:AAGgF6XgIJOW9pm9kqboV0l5q6QfHeJ8sw8/sendMessage?chat_id=650249840&text={}".format(bantext))
+   requests.get("https://api.telegram.org/bot1090278340:AAG_76X95gTm-Iry2VBOxIpXhYHa3XriNMs/sendMessage?chat_id=650249840&text={}".format(bantext))
  else:
   reza = "khar"
 schedule.every(30).seconds.do(reza)
