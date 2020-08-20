@@ -16,7 +16,7 @@ def reza():
    requests.get("https://api.telegram.org/bot1362187823:AAGgF6XgIJOW9pm9kqboV0l5q6QfHeJ8sw8/sendMessage?chat_id=650249840&text={}".format(bantext))
  else:
   reza = "khar"
-schedule.every(1).minutes.do(reza)
+schedule.every(30).seconds.do(reza)
 while True:
    schedule.run_pending()
    time.sleep(1)
